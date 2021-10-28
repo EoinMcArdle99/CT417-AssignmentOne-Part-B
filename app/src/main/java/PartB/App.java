@@ -21,8 +21,14 @@ public class App {
         ArrayList<Student> students = new ArrayList<Student>(Arrays.asList(s1, s2, s3, s4, s5));
 
         String formatter = "yyyy-dd-MM hh:mm:ss";
-        Course course1 = new Course("CS&IT", DateTime.parse("2021-01-10 12:59:59", DateTimeFormat.forPattern(formatter)), DateTime.parse("2022-01-10 12:59:59", DateTimeFormat.forPattern(formatter)));
-        Course course2 = new Course("FM&E", DateTime.parse("2021-01-10 12:59:59", DateTimeFormat.forPattern(formatter)), DateTime.parse("2022-01-10 12:59:59", DateTimeFormat.forPattern(formatter)));
+        Course course1 = new Course(
+                "CS&IT",
+                DateTime.parse("2021-01-10 12:59:59", DateTimeFormat.forPattern(formatter)),
+                DateTime.parse("2022-01-10 12:59:59", DateTimeFormat.forPattern(formatter)));
+        Course course2 = new Course(
+                "FM&E",
+                DateTime.parse("2021-01-10 12:59:59", DateTimeFormat.forPattern(formatter)),
+                DateTime.parse("2022-01-10 12:59:59", DateTimeFormat.forPattern(formatter)));
 
         PartA.Module module1 = new PartA.Module("Software Engineering", "CT417");
         PartA.Module module2 = new PartA.Module("Machine Learning", "CT4101");
@@ -55,6 +61,7 @@ public class App {
 
         System.out.println(course1);
         System.out.println(course2);
+
         for(Student student : students) {
             System.out.println(student);
         }
